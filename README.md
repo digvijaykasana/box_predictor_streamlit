@@ -1,11 +1,11 @@
 
-# 📦 Box Predictor (Streamlit App)
+# Box Predictor (Streamlit App)
 
 This project predicts how many boxes of each dimension are needed for one or more orders, based on product category quantities. It uses a pre-trained **Optuna-tuned Random Forest** model stored locally and provides an interactive **Streamlit** interface for testing on real orders.
 
 ---
 
-## 🧠 What It Does
+## What It Does
 
 - Takes user input for multiple product categories and quantities.  
 - Uses a feature-engineered Random Forest model (`optuna_random_forest1_model.pkl`) to predict box counts for each box dimension.  
@@ -15,7 +15,7 @@ Everything runs locally — no API calls, no cloud dependencies.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 box_predictor_streamlit/
@@ -30,7 +30,7 @@ box_predictor_streamlit/
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 1. **Clone or extract the folder**
    ```bash
@@ -58,7 +58,7 @@ box_predictor_streamlit/
 
 ---
 
-## 🚀 Running the App
+## Running the App
 
 Run Streamlit from the root directory:
 
@@ -70,7 +70,7 @@ This opens a local web interface (usually `http://localhost:8501`).
 
 ---
 
-## 🧩 How It Works
+## How It Works
 
 ### 1. Feature Setup
 The model uses a fixed input schema defined in `utils/predictor.py`:
@@ -113,7 +113,7 @@ The interface allows multiple orders in one go:
 
 ---
 
-## 🧮 Model Notes
+## Model Notes
 
 The saved model was trained and tuned using **Optuna** for hyperparameter optimization.  
 It’s a multi-output Random Forest regressor — each output corresponds to a different box dimension.
@@ -143,7 +143,7 @@ joblib
 
 ---
 
-## 🧠 Quick Start Summary
+## Quick Start Summary
 
 ```bash
 # 1. Setup
@@ -160,7 +160,7 @@ Open browser → enter product quantities → click Predict
 
 ---
 
-## ✅ Key Files to Note
+## Key Files to Note
 
 | File | Purpose |
 |------|----------|
@@ -171,7 +171,7 @@ Open browser → enter product quantities → click Predict
 
 ---
 
-## 🧭 Optional Improvements
+## Optional Improvements
 
 - Add input validation and default category templates.  
 - Display predicted box counts as a table or chart.  
